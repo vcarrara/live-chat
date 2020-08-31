@@ -1,0 +1,1 @@
+const authenticateJWT = require('../../authenticateJWT')

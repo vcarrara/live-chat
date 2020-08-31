@@ -1,0 +1,141 @@
+html,
+body,
+#root {
+    height: 100%;
+}
+
+.Messages {
+    /* padding: 1em; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Message {
+    border-radius: 20px;
+    background-color: #f8f9fa;
+    /* width: 40%; */
+    padding: 0.8rem;
+    // float: left;
+    max-width: 40%;
+    // margin-left: 0;
+    // margin-right: auto;
+}
+
+// .MessageWrapper {
+//     margin-bottom: 2em;
+//     display: flex;
+//     flex-direction: column;
+// }
+
+.Message.mine {
+    // float: right;
+    background-color: #ffe0b2;
+    // justify-content: end;
+    // margin-left: auto;
+    // margin-right: 0;
+    // text-align: end;
+}
+
+// .username.mine {
+//     margin-left: auto;
+// }
+
+#root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.ConversationsList {
+    .ConversationsListItem {
+        height: 4em;
+        border: thin solid black;
+        display: flex;
+        align-items: center;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        flex-direction: row;
+
+        .lastMessage {
+            height: 100%;
+        }
+    }
+}
+
+.circle {
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+    font-size: larger;
+}
+
+.no-wrap {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.add-room {
+    height: 24px;
+    width: 24px;
+}
+
+/* a container with flex-direction column */
+// .main-container {
+//     height: 75vh; /* or position:absolute; height:100%; */
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// /* an arbitrary container of fixed height */
+// .fixed-container {
+//     height: 100px;
+//     padding: 20px;
+//     background-color: #0b5ab0;
+//     color: white;
+// }
+
+// /* this is the flex container that will take the rest of the height */
+// .content-wrapper {
+//     display: flex;
+//     flex: 1;
+//     min-height: 0px; /* IMPORTANT: you need this for non-chrome browsers */
+// }
+
+// /* the container for our overflowed content */
+// .overflow-container {
+//     flex: 1;
+//     overflow: auto;
+// }
+
+// /* the overflow content itself */
+// .overflow-content {
+//     height: 2000px;
+//     color: black;
+//     background-color: #ddd;
+//     padding: 20px;
+// }
+
+code {
+    font-weight: bold;
+    color: darkred;
+    margin: 0 5px;
+}
+
+.hide-bar::-webkit-scrollbar {
+    display: none;
+}

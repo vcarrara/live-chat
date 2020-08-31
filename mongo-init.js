@@ -1,0 +1,98 @@
+// Creation of database "live-chat"
+db = db.getSiblingDB("live-chat");
+
+// Creation of collections
+db.createCollection("users");
+db.createCollection("conversations");
+db.createCollection("avatars");
+
+// Insertion of avatar names in db
+const legos = [
+  "001-lego",
+  "002-lego",
+  "003-lego",
+  "004-lego",
+  "005-lego",
+  "006-lego",
+  "007-lego",
+  "008-lego",
+  "009-lego",
+  "010-lego",
+  "011-lego",
+  "012-lego",
+  "013-lego",
+  "014-lego",
+  "015-lego",
+  "016-lego",
+  "017-lego",
+  "018-lego",
+  "019-lego",
+  "020-lego",
+  "021-lego",
+  "022-lego",
+  "023-lego",
+  "024-lego",
+  "025-lego",
+  "026-ninja",
+  "027-cowboy",
+  "028-knight",
+  "029-explorer",
+  "030-scuba-diver",
+  "031-clown",
+  "032-boy",
+  "033-native-american",
+  "034-cashier",
+  "035-spy",
+  "036-mariachi",
+  "037-pirate",
+  "038-fisherman",
+  "039-cyborg",
+  "040-vampire",
+  "041-businessman",
+  "042-conquistador",
+  "043-DJ",
+  "044-american-football-player",
+  "045-cheerleader",
+  "046-santa-claus",
+  "047-diver",
+  "048-thespian",
+  "049-man",
+  "050-man",
+  "051-cowgirl",
+  "052-caveman",
+  "053-witch",
+  "054-vampire",
+  "055-queen",
+  "056-gnome",
+  "057-injured",
+  "058-thief",
+  "059-hiker",
+  "060-devil",
+  "061-desert",
+  "062-ninja",
+  "063-batman",
+  "064-superman",
+  "065-wolverine",
+  "066-spiderman",
+  "067-dummy",
+  "068-magician",
+  "069-thor",
+  "070-deadpool",
+  "071-businessman",
+  "072-woman",
+  "073-mummy",
+  "074-singer",
+  "075-mohawk",
+  "076-explorer",
+  "077-dentist",
+  "078-hip-hop",
+  "079-surgeon",
+  "080-priest",
+];
+
+// Insertion
+db.avatars.insertMany(
+  legos.map(function (name) {
+    return { name, extension: "png", collection: "lego" };
+  })
+);
